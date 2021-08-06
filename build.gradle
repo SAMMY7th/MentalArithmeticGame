@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "org.dddjava.jig-gradle-plugin" version '2021.7.5'
+}
+
+group 'net.nocono'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+[compileJava, processResources]*.shouldRunAfter(clean)
+jigReports.dependsOn(clean, classes)
