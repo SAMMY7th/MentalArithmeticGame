@@ -1,14 +1,12 @@
 package net.nocono.mentalarithmetic.domain.model;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TwoLengthExpressionTest {
 
     @Test
-    @Disabled
     void 数字２個の計算式の結果を得ることができる() {
         TwoLengthExpression twoLengthExpression =
                 new TwoLengthExpression(SingleDigitInteger.valueOf(1), Operator.足す, SingleDigitInteger.valueOf(2));

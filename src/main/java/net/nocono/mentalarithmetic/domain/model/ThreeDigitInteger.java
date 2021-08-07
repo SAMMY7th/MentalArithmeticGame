@@ -19,4 +19,9 @@ public class ThreeDigitInteger implements DigitInteger {
     static ThreeDigitInteger valueOf(int value) {
         return new ThreeDigitInteger(value);
     }
+
+    @Override
+    public int value() {
+        return value;
+    }
 }

@@ -19,4 +19,9 @@ public class SingleDigitInteger implements DigitInteger {
     static SingleDigitInteger valueOf(int value) {
         return new SingleDigitInteger(value);
     }
+
+    @Override
+    public int value() {
+        return value;
+    }
 }

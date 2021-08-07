@@ -19,4 +19,9 @@ public class TwoDigitInteger implements DigitInteger {
     static TwoDigitInteger valueOf(int value) {
         return new TwoDigitInteger(value);
     }
+
+    @Override
+    public int value() {
+        return value;
+    }
 }

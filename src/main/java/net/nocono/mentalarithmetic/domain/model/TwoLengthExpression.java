@@ -16,6 +16,6 @@ public class TwoLengthExpression implements Expression {
 
     @Override
     public CalculationResult 計算結果() {
-        return null;
+        return new CalculationResult(operator.apply(number1.value(), number2.value()));
     }
 }
