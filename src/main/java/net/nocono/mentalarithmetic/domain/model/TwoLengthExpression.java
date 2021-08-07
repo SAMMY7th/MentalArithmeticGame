@@ -13,4 +13,9 @@ public class TwoLengthExpression implements Expression {
         this.operator = operator;
         this.number2 = number2;
     }
+
+    @Override
+    public CalculationResult 計算結果() {
+        return null;
+    }
 }

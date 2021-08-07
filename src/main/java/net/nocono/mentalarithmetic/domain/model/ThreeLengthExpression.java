@@ -17,4 +17,9 @@ public class ThreeLengthExpression implements Expression {
         this.operator2 = operator2;
         this.number3 = number3;
     }
+
+    @Override
+    public CalculationResult 計算結果() {
+        return null;
+    }
 }
