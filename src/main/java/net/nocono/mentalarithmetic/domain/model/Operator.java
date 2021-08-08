@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import java.util.Random;
+
 /**
  * 演算子
  */
@@ -27,7 +29,21 @@ public enum Operator {
 
     public abstract double apply(double value1, double value2);
 
+    static Random random = new Random();
+
     public boolean の方がターゲットより優先順位が高い(Operator target) {
         return this.priority.の方がターゲットより優先順位が高い(target.priority);
+    }
+
+    static Operator random() {
+        int nextInt = random.nextInt(4);
+
+        switch (nextInt) {
+            case 0: return Operator.足す;
+            case 1: return Operator.引く;
+            case 2: return Operator.掛ける;
+            case 3: return Operator.割る;
+            default: return Operator.足す;
+        }
     }
 }
