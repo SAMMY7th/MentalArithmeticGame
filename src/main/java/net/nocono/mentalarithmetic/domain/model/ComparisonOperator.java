@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import java.util.Random;
+
 /**
  * 比較演算子
  */
@@ -23,8 +25,22 @@ public enum ComparisonOperator {
     String operator;
 
     public abstract boolean apply(double value1, double value2);
+    static Random random = new Random();
 
     ComparisonOperator(String operator) {
         this.operator = operator;
+    }
+
+    static ComparisonOperator random() {
+        int nextInt = random.nextInt(5);
+
+        switch (nextInt) {
+            case 0: return ComparisonOperator.イコール;
+            case 1: return ComparisonOperator.以上;
+            case 2: return ComparisonOperator.より大きい;
+            case 3: return ComparisonOperator.以下;
+            case 4: return ComparisonOperator.より小さい;
+            default: return ComparisonOperator.イコール;
+        }
     }
 }
