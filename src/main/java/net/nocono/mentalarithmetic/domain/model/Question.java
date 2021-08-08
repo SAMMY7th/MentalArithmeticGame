@@ -15,6 +15,9 @@ public class Question {
     }
 
     Answer 正解() {
-        return null;
+        boolean 真偽 = comparisonOperator.apply(leftExpression.計算結果().value, rightExpression.計算結果().value);
+        if(真偽) return Answer.まる;
+
+        return Answer.ばつ;
     }
 }
