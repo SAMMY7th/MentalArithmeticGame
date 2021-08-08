@@ -9,7 +9,7 @@ import net.nocono.mentalarithmetic.domain.model.QuestionGenerator;
  */
 public class MentalArithmeticService {
 
-    public Question 暗算ゲームの問題を取得する() {
+    public Question generateQuestion() {
         QuestionGenerator 質問生成 = new QuestionGenerator(Level.Easy);
         return 質問生成.generate();
     }
