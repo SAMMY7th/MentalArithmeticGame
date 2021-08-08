@@ -20,4 +20,9 @@ public class Question {
 
         return Answer.ばつ;
     }
+
+    @Override
+    public String toString() {
+        return leftExpression.toString() + comparisonOperator.toString() + rightExpression.toString();
+    }
 }

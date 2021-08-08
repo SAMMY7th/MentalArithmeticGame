@@ -18,4 +18,9 @@ public class TwoLengthExpression implements Expression {
     public CalculationResult 計算結果() {
         return new CalculationResult(operator.apply(number1.value(), number2.value()));
     }
+
+    @Override
+    public String toString() {
+        return number1.toString() + operator.toString() + number2.toString();
+    }
 }

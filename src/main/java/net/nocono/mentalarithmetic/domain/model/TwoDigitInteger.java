@@ -24,4 +24,9 @@ public class TwoDigitInteger implements DigitInteger {
     public int value() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 }

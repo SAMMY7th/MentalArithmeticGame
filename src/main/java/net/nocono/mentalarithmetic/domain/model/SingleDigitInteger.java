@@ -32,4 +32,9 @@ public class SingleDigitInteger implements DigitInteger {
     static SingleDigitInteger random() {
         return new SingleDigitInteger(random.nextInt(19) - 9);
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 }

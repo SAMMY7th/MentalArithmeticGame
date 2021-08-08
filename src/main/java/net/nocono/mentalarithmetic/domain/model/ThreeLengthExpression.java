@@ -24,4 +24,9 @@ public class ThreeLengthExpression implements Expression {
 
         return new CalculationResult(operator2.apply(operator1.apply(number1.value(), number2.value()), number3.value()));
     }
+
+    @Override
+    public String toString() {
+        return number1.toString() + operator1.toString() + number2.toString() + operator2.toString() + number3.toString();
+    }
 }
