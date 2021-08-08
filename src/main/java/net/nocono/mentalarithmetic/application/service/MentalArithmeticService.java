@@ -9,8 +9,8 @@ import net.nocono.mentalarithmetic.domain.model.QuestionGenerator;
  */
 public class MentalArithmeticService {
 
-    public Question generateQuestion() {
+    public String generateQuestion() {
         QuestionGenerator 質問生成 = new QuestionGenerator(Level.Easy);
-        return 質問生成.generate();
+        return 質問生成.generate().toString();
     }
 }
