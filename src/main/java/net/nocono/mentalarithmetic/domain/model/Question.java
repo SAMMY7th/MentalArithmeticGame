@@ -25,4 +25,9 @@ public class Question {
     public String toString() {
         return leftExpression.toString() + comparisonOperator.toString() + rightExpression.toString();
     }
+
+    public Result 判定(Answer ユーザーの解答) {
+        if(ユーザーの解答 == 正解()) return Result.正解;
+        return Result.不正解;
+    }
 }
