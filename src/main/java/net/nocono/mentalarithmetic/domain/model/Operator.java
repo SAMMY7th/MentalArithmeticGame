@@ -46,4 +46,9 @@ public enum Operator {
             default: return Operator.足す;
         }
     }
+
+    @Override
+    public String toString() {
+        return this.operator;
+    }
 }

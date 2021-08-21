@@ -43,4 +43,9 @@ public enum ComparisonOperator {
             default: return ComparisonOperator.イコール;
         }
     }
+
+    @Override
+    public String toString() {
+        return this.operator;
+    }
 }

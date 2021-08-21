@@ -23,7 +23,7 @@ public class Question {
 
     @Override
     public String toString() {
-        return leftExpression.toString() + comparisonOperator.toString() + rightExpression.toString();
+        return leftExpression.toString() + " " + comparisonOperator.toString() + " " + rightExpression.toString();
     }
 
     public Result 判定(Answer ユーザーの解答) {
