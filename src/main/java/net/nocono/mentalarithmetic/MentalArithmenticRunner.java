@@ -9,6 +9,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 @Component
@@ -28,14 +29,15 @@ public class MentalArithmenticRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         Question 問題 = mentalArithmeticService.generateQuestion(Level.Normal);// TODO: 引数から受け取るようにする
 
-        System.out.print(問題.toString());
+        System.out.println(問題.toString());
 
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.next();
 
-        Answer ユーザーの解答 = Answer.valueOf(answer);
-
-        Result 結果 = 問題.判定(ユーザーの解答);
-        System.out.println(結果);
+        Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(answer);
+        ユーザーの解答.ifPresentOrElse(a -> {
+            Result 結果 = 問題.判定(a);
+            System.out.println(結果);
+        }, () -> System.out.println("入力が正しくありません。"));
     }
 }
