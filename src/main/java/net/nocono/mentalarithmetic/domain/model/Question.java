@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
+
 /**
  * 問題
  */

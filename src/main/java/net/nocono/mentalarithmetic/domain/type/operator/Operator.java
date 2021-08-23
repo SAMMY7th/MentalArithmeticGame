@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.type.operator;
 
 import java.util.Random;
 
@@ -35,7 +35,7 @@ public enum Operator {
         return this.priority.の方がターゲットより優先順位が高い(target.priority);
     }
 
-    static Operator random() {
+    public static Operator random() {
         int nextInt = random.nextInt(4);
 
         switch (nextInt) {

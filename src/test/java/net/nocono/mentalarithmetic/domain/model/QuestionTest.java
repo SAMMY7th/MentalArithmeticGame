@@ -1,5 +1,8 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
+import net.nocono.mentalarithmetic.domain.type.operator.Operator;
+import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

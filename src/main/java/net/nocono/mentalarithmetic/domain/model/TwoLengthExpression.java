@@ -1,5 +1,8 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
+import net.nocono.mentalarithmetic.domain.type.operator.Operator;
+
 /**
  * 数字が２個の数式
  */

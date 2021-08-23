@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.type.operator;
 
 import java.util.Random;
 
@@ -31,7 +31,7 @@ public enum ComparisonOperator {
         this.operator = operator;
     }
 
-    static ComparisonOperator random() {
+    public static ComparisonOperator random() {
         int nextInt = random.nextInt(5);
 
         switch (nextInt) {

@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.type.digit;
 
 /**
  * 三桁の整数

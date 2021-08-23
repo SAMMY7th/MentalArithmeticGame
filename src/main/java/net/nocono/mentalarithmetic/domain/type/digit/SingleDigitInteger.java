@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.type.digit;
 
 import java.util.Random;
 
@@ -20,7 +20,7 @@ public class SingleDigitInteger implements DigitInteger {
         this.value = value;
     }
 
-    static SingleDigitInteger valueOf(int value) {
+    public static SingleDigitInteger valueOf(int value) {
         return new SingleDigitInteger(value);
     }
 
@@ -29,7 +29,7 @@ public class SingleDigitInteger implements DigitInteger {
         return value;
     }
 
-    static SingleDigitInteger random() {
+    public static SingleDigitInteger random() {
         return new SingleDigitInteger(random.nextInt(19) - 9);
     }
 
