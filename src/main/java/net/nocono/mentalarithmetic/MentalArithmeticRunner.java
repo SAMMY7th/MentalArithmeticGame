@@ -13,10 +13,10 @@ import java.util.Optional;
 import java.util.Scanner;
 
 @Component
-public class MentalArithmenticRunner implements ApplicationRunner {
+public class MentalArithmeticRunner implements ApplicationRunner {
     MentalArithmeticService mentalArithmeticService;
 
-    public MentalArithmenticRunner(MentalArithmeticService mentalArithmeticService) {
+    public MentalArithmeticRunner(MentalArithmeticService mentalArithmeticService) {
         this.mentalArithmeticService = mentalArithmeticService;
     }
 
@@ -27,16 +27,16 @@ public class MentalArithmenticRunner implements ApplicationRunner {
      */
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Question 問題 = mentalArithmeticService.generateQuestion(Level.Normal);// TODO: 引数から受け取るようにする
+        Question 問題 = mentalArithmeticService.出題する(Level.Normal);// TODO: 引数から受け取るようにする
 
         System.out.println(問題.toString());
 
         Scanner scanner = new Scanner(System.in);
-        String answer = scanner.next();
+        String ユーザーの入力 = scanner.next();
 
-        Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(answer);
-        ユーザーの解答.ifPresentOrElse(a -> {
-            Result 結果 = 問題.判定(a);
+        Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(ユーザーの入力);
+        ユーザーの解答.ifPresentOrElse(解答 -> {
+            Result 結果 = 問題.判定(解答);
             System.out.println(結果);
         }, () -> System.out.println("入力が正しくありません。"));
     }

@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MentalArithmeticService {
 
-    public Question generateQuestion(Level level) {
-        QuestionGenerator 質問生成 = new QuestionGenerator(level);
-        return 質問生成.generate();
+    public Question 出題する(Level level) {
+        QuestionGenerator 問題生成 = new QuestionGenerator(level);
+        return 問題生成.generate();
     }
 }
