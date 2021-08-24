@@ -23,7 +23,9 @@ public class ThreeLengthExpression implements Expression {
 
     @Override
     public CalculationResult 計算結果() {
-        if (operator2.の方がターゲットより優先順位が高い(operator1)) return new CalculationResult(operator1.apply(number1.value(), operator2.apply(number2.value(), number3.value())));
+        if (operator2.の方がターゲットより優先順位が高い(operator1)) {
+            return new CalculationResult(operator1.apply(number1.value(), operator2.apply(number2.value(), number3.value())));
+        }
 
         return new CalculationResult(operator2.apply(operator1.apply(number1.value(), number2.value()), number3.value()));
     }

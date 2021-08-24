@@ -17,6 +17,8 @@ public enum Answer {
     }
 
     public static Optional<Answer> 入力文字から変換(String 入力された文字) {
-        return EnumSet.allOf(Answer.class).stream().filter(解答候補 -> 解答候補.入力文字.contains(入力された文字)).findFirst();
+        return EnumSet.allOf(Answer.class).stream()
+                .filter(解答候補 -> 解答候補.入力文字.contains(入力された文字))
+                .findFirst();
     }
 }
