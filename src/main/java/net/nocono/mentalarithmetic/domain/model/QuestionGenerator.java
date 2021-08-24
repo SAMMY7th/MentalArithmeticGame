@@ -20,6 +20,14 @@ public class QuestionGenerator {
         ComparisonOperator 比較演算子 = ComparisonOperator.random();
         Expression 右辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
 
+        while (左辺.ゼロ除算発生()) {
+            左辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+        }
+
+        while (右辺.ゼロ除算発生()) {
+            右辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+        }
+
         return new Question(左辺, 比較演算子, 右辺);
     }
 }

@@ -31,6 +31,13 @@ public class ThreeLengthExpression implements Expression {
     }
 
     @Override
+    public boolean ゼロ除算発生() {
+        if (Double.isInfinite(計算結果().value())) return true;
+
+        return false;
+    }
+
+    @Override
     public String toString() {
         return number1.toString() + operator1.toString() + number2.toString() + operator2.toString() + number3.toString();
     }

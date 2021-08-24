@@ -5,4 +5,6 @@ package net.nocono.mentalarithmetic.domain.model;
  */
 public interface Expression {
     CalculationResult 計算結果();
+
+    boolean ゼロ除算発生();
 }

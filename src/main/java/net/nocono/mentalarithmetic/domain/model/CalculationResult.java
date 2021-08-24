@@ -9,4 +9,8 @@ public class CalculationResult {
     CalculationResult(double value) {
         this.value = value;
     }
+
+    public double value() {
+        return value;
+    }
 }

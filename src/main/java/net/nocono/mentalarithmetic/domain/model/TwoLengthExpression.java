@@ -23,6 +23,13 @@ public class TwoLengthExpression implements Expression {
     }
 
     @Override
+    public boolean ゼロ除算発生() {
+        if (Double.isInfinite(計算結果().value())) return true;
+
+        return false;
+    }
+
+    @Override
     public String toString() {
         return number1.toString() + operator.toString() + number2.toString();
     }

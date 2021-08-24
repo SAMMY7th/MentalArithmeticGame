@@ -6,6 +6,7 @@ import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class ThreeLengthExpressionTest {
 
@@ -52,5 +53,19 @@ class ThreeLengthExpressionTest {
         CalculationResult 計算結果 = threeLengthExpression.計算結果();
 
         assertEquals(new CalculationResult(0d).value, 計算結果.value);
+    }
+
+    @Test
+    void ゼロ除算発生の判定ができる() {
+        DigitInteger number1 = SingleDigitInteger.valueOf(1);
+        Operator operator1 = Operator.足す;
+        DigitInteger number2 = SingleDigitInteger.valueOf(2);
+        Operator operator2 = Operator.割る;
+        DigitInteger number3 = SingleDigitInteger.valueOf(0);
+
+        ThreeLengthExpression threeLengthExpression =
+                new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
+
+        assertTrue(threeLengthExpression.ゼロ除算発生());
     }
 }
