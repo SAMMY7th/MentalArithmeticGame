@@ -36,7 +36,7 @@ public class MentalArithmeticRunner implements ApplicationRunner {
 
         Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(ユーザーの入力);
         ユーザーの解答.ifPresentOrElse(解答 -> {
-            Result 結果 = 問題.判定(解答);
+            Result 結果 = mentalArithmeticService.入力された解答の正誤を判定する(問題, 解答);
             System.out.println(結果);
         }, () -> System.out.println("入力が正しくありません。"));
     }
