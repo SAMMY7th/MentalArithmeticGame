@@ -27,7 +27,21 @@ public class MentalArithmeticRunner implements ApplicationRunner {
      */
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Question 問題 = mentalArithmeticService.出題する(Level.Normal);// TODO: 引数から受け取るようにする
+        String[] argStrs = args.getSourceArgs();
+        Level level;
+        if (argStrs.length <= 0) {
+            level = Level.Normal;
+        } else {
+            Optional<Level> 指定のレベル = Level.パラメータから変換(argStrs[0]);
+            if (指定のレベル.isEmpty()) {
+                System.out.println("パラメータが不正です。");
+                return;
+            }
+
+            level = 指定のレベル.get();
+        }
+
+        Question 問題 = mentalArithmeticService.出題する(level);
 
         System.out.println(問題.toString());
 

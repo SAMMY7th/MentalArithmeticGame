@@ -1,8 +1,6 @@
 package net.nocono.mentalarithmetic.domain.model;
 
 import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
-import net.nocono.mentalarithmetic.domain.type.operator.Operator;
-import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
 
 /**
  * 質問生成
@@ -15,17 +13,16 @@ public class QuestionGenerator {
     }
 
     public Question generate() {
-        // TODO: レベルに応じた式を生成するようにする
-        Expression 左辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+        Expression 左辺 = level.左辺();
         ComparisonOperator 比較演算子 = ComparisonOperator.random();
-        Expression 右辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+        Expression 右辺 = level.右辺();
 
         while (左辺.ゼロ除算発生()) {
-            左辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+            左辺 = level.左辺();
         }
 
         while (右辺.ゼロ除算発生()) {
-            右辺 = new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+            右辺 = level.右辺();
         }
 
         return new Question(左辺, 比較演算子, 右辺);
