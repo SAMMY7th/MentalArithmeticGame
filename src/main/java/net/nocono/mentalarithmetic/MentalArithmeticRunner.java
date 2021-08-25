@@ -27,6 +27,12 @@ public class MentalArithmeticRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         String[] argStrs = args.getSourceArgs();
+
+        if (argStrs.length > 0 && argStrs[0].equals("--help")) {
+            ヘルプ表示();
+            return;
+        }
+
         Optional<Level> level = Level.レベル取得(argStrs);
         if (level.isEmpty()) {
             System.out.println("パラメータが不正です。");
@@ -52,5 +58,9 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         }, () -> System.out.println("入力が正しくありません。"));
 
         scanner.close();
+    }
+
+    private void ヘルプ表示() {
+        System.out.println("-e:Easy -n:Normal -h:Hard");
     }
 }
