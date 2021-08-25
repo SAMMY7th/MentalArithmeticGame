@@ -27,28 +27,21 @@ public class MentalArithmeticRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         String[] argStrs = args.getSourceArgs();
-        Level level;
-        if (argStrs.length <= 0) {
-            level = Level.Normal;
-        } else {
-            Optional<Level> 指定のレベル = Level.パラメータから変換(argStrs[0]);
-            if (指定のレベル.isEmpty()) {
-                System.out.println("パラメータが不正です。");
-                return;
-            }
-
-            level = 指定のレベル.get();
+        Optional<Level> level = Level.レベル取得(argStrs);
+        if (level.isEmpty()) {
+            System.out.println("パラメータが不正です。");
+            return;
         }
 
-        Question 問題 = mentalArithmeticService.出題する(level);
+        Question 問題 = mentalArithmeticService.出題する(level.get());
         LocalDateTime 出題日時 = LocalDateTime.now();
 
         System.out.println(問題.toString());
 
         Scanner scanner = new Scanner(System.in);
         String ユーザーの入力 = scanner.next();
-
         LocalDateTime 解答日時 = LocalDateTime.now();
+
         Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(ユーザーの入力);
         ユーザーの解答.ifPresentOrElse(解答 -> {
             CorrectResult 正誤 = mentalArithmeticService.入力された解答の正誤を判定する(問題, 解答);

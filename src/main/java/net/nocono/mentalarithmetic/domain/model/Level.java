@@ -63,9 +63,13 @@ public enum Level {
     public abstract Expression 左辺();
     public abstract Expression 右辺();
 
-    public static Optional<Level> パラメータから変換(String 入力されたパラメータ) {
+    public static Optional<Level> レベル取得(String[] 入力されたパラメータ) {
+        if (入力されたパラメータ.length <= 0) {
+            return Optional.of(Level.Normal);
+        }
+
         return EnumSet.allOf(Level.class).stream()
-                .filter(候補 -> 候補.parameter.contains(入力されたパラメータ))
+                .filter(候補 -> 候補.parameter.contains(入力されたパラメータ[0]))
                 .findFirst();
     }
 }
