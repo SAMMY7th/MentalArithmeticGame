@@ -37,6 +37,7 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         LocalDateTime 出題日時 = LocalDateTime.now();
 
         System.out.println(問題.toString());
+        System.out.println("y or n");
 
         Scanner scanner = new Scanner(System.in);
         String ユーザーの入力 = scanner.next();
