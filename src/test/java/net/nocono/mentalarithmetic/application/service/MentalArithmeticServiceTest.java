@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.application.service;
 
+import net.nocono.mentalarithmetic.domain.model.Answer;
+import net.nocono.mentalarithmetic.domain.model.CorrectResult;
 import net.nocono.mentalarithmetic.domain.model.Level;
 import net.nocono.mentalarithmetic.domain.model.Question;
 import org.junit.jupiter.api.Test;
@@ -22,6 +24,8 @@ class MentalArithmeticServiceTest {
 
     @Test
     void 入力された解答の正誤を判定することができる() {
-        // TODO:
+        Question 問題 = mentalArithmeticService.出題する(Level.Normal);
+        CorrectResult 正誤 = mentalArithmeticService.入力された解答の正誤を判定する(問題, Answer.はい);
+        assertNotNull(正誤);
     }
 }
