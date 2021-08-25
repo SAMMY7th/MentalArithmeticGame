@@ -29,3 +29,5 @@ java -jar ./build/libs/MentalArithmeticGame-1.0-SNAPSHOT.jar
 
 オプションで難易度を指定することができます。（省略時はNormal）
 -e:Easy -n:Normal -h:Hard
+
+
