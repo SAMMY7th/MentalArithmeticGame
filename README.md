@@ -30,4 +30,16 @@ java -jar ./build/libs/MentalArithmeticGame-1.0-SNAPSHOT.jar
 オプションで難易度を指定することができます。（省略時はNormal）
 -e:Easy -n:Normal -h:Hard
 
+## 設計方針
 
+このアプリの設計は下記の「ドメインオブジェクトの設計パターン」に基づいています。
+
+ドメインオブジェクトの設計パターン: [設計ガイドライン · masuda220/business-logic-patterns Wiki](https://github.com/masuda220/business-logic-patterns/wiki/%E8%A8%AD%E8%A8%88%E3%82%AC%E3%82%A4%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3)
+
+JIGというコードから一覧や図を生成するツールで設計を可視化することができます。
+
+[dddjava/jig: Java Instant-document Gazer](https://github.com/dddjava/jig)
+
+JIGの利用方法は下記ページを参考にしてください。
+
+[jig/jig-gradle-plugin at main · dddjava/jig](https://github.com/dddjava/jig/tree/main/jig-gradle-plugin)
