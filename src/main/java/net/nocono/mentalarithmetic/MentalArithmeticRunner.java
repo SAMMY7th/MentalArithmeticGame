@@ -56,5 +56,7 @@ public class MentalArithmeticRunner implements ApplicationRunner {
             System.out.println(問題.計算式を計算した状態での比較式());
             System.out.println(結果);
         }, () -> System.out.println("入力が正しくありません。"));
+
+        scanner.close();
     }
 }
