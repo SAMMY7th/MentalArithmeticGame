@@ -28,8 +28,8 @@ public class Question {
         return 左辺.toString() + " " + 比較演算子.toString() + " " + 右辺.toString();
     }
 
-    public Result 判定(Answer ユーザーの解答) {
-        if(ユーザーの解答 == 正解()) return Result.正解;
-        return Result.不正解;
+    public CorrectResult 判定(Answer ユーザーの解答) {
+        if(ユーザーの解答 == 正解()) return CorrectResult.正解;
+        return CorrectResult.不正解;
     }
 }

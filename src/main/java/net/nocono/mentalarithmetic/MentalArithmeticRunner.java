@@ -1,14 +1,13 @@
 package net.nocono.mentalarithmetic;
 
 import net.nocono.mentalarithmetic.application.service.MentalArithmeticService;
-import net.nocono.mentalarithmetic.domain.model.Answer;
-import net.nocono.mentalarithmetic.domain.model.Level;
-import net.nocono.mentalarithmetic.domain.model.Question;
-import net.nocono.mentalarithmetic.domain.model.Result;
+import net.nocono.mentalarithmetic.domain.model.*;
+import net.nocono.mentalarithmetic.domain.type.MilliSeconds;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -42,15 +41,18 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         }
 
         Question 問題 = mentalArithmeticService.出題する(level);
+        LocalDateTime 出題日時 = LocalDateTime.now();
 
         System.out.println(問題.toString());
 
         Scanner scanner = new Scanner(System.in);
         String ユーザーの入力 = scanner.next();
 
+        LocalDateTime 解答日時 = LocalDateTime.now();
         Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(ユーザーの入力);
         ユーザーの解答.ifPresentOrElse(解答 -> {
-            Result 結果 = mentalArithmeticService.入力された解答の正誤を判定する(問題, 解答);
+            CorrectResult 正誤 = mentalArithmeticService.入力された解答の正誤を判定する(問題, 解答);
+            Result 結果 = new Result(正誤, MilliSeconds.from(出題日時, 解答日時));
             System.out.println(結果);
         }, () -> System.out.println("入力が正しくありません。"));
     }

@@ -14,7 +14,7 @@ public class MentalArithmeticService {
         return 問題生成.generate();
     }
 
-    public Result 入力された解答の正誤を判定する(Question 問題, Answer 解答) {
+    public CorrectResult 入力された解答の正誤を判定する(Question 問題, Answer 解答) {
         return 問題.判定(解答);
     }
 }
