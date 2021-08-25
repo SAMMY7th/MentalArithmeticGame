@@ -17,7 +17,7 @@ class QuestionTest {
 
         Question question = new Question(左辺, 比較演算子, 右辺);
 
-        assertEquals(Answer.ばつ, question.正解());
+        assertEquals(Answer.いいえ, question.正解());
     }
 
     @Test
@@ -28,7 +28,7 @@ class QuestionTest {
 
         Question question = new Question(左辺, 比較演算子, 右辺);
 
-        assertEquals(Answer.ばつ, question.正解());
+        assertEquals(Answer.いいえ, question.正解());
     }
 
     @Test
@@ -39,7 +39,7 @@ class QuestionTest {
 
         Question question = new Question(左辺, 比較演算子, 右辺);
 
-        assertEquals(Answer.ばつ, question.正解());
+        assertEquals(Answer.いいえ, question.正解());
     }
 
     @Test
@@ -50,7 +50,7 @@ class QuestionTest {
 
         Question question = new Question(左辺, 比較演算子, 右辺);
 
-        assertEquals(Answer.まる, question.正解());
+        assertEquals(Answer.はい, question.正解());
     }
 
     @Test
@@ -61,7 +61,7 @@ class QuestionTest {
 
         Question question = new Question(左辺, 比較演算子, 右辺);
 
-        assertEquals(Answer.まる, question.正解());
+        assertEquals(Answer.はい, question.正解());
     }
 
 }

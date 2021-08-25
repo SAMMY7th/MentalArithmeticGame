@@ -18,9 +18,9 @@ public class Question {
 
     Answer 正解() {
         boolean 真偽 = 比較演算子.apply(左辺.計算結果().value, 右辺.計算結果().value);
-        if(真偽) return Answer.まる;
+        if(真偽) return Answer.はい;
 
-        return Answer.ばつ;
+        return Answer.いいえ;
     }
 
     @Override

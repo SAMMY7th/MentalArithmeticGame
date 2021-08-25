@@ -8,7 +8,7 @@ import java.util.Optional;
  * 解答
  */
 public enum Answer {
-    まる(List.of("y", "Y")), ばつ(List.of("n", "N"));
+    はい(List.of("y", "Y")), いいえ(List.of("n", "N"));
 
     List<String> 入力文字;
 
