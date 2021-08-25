@@ -32,4 +32,8 @@ public class Question {
         if(ユーザーの解答 == 正解()) return CorrectResult.正解;
         return CorrectResult.不正解;
     }
+
+    public String 計算式を計算した状態での比較式() {
+        return 左辺.計算結果().toString() + " " + 比較演算子.toString() + " " + 右辺.計算結果().toString();
+    }
 }
