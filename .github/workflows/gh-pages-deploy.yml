@@ -1,6 +1,9 @@
 name: Deploy GithubPages
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -31,4 +34,4 @@ jobs:
           git rm .gitignore
           git add ./build/jig
           git commit -m "Update jig"
-          git subtree push --prefix build/jig origin gh-pages
+          git push origin `git subtree split --prefix build/jig ${GITHUB_REF#refs/heads/}`:gh-pages --force
