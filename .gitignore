@@ -1,11 +1,8 @@
 ### Gradle template
 .gradle
-**/build/*
+**/build/
 !src/**/build/
 output/
-
-!/build/jig/
-
 
 # Cache of project
 .gradletasknamecache
