@@ -26,6 +26,8 @@ jobs:
         run: ./gradlew clean build jig
       - name: Deploy GithubPages
         run: |
+          git config --global user.email "sammy@nocono.net"
+          git config --global user.name "Abe Asami"
           git rm .gitignore
           git add ./build/jig
           git commit -m "Update jig"
