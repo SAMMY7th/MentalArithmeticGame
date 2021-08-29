@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import net.nocono.mentalarithmetic.domain.model.expression.CalculationResult;
+import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthExpression;
 import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
 import net.nocono.mentalarithmetic.domain.type.operator.Operator;
 import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
@@ -22,7 +24,7 @@ class ThreeLengthExpressionTest {
                 new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
         CalculationResult 計算結果 = threeLengthExpression.計算結果();
 
-        assertEquals(new CalculationResult(3.5d).value, 計算結果.value);
+        assertEquals(new CalculationResult(3.5d).value(), 計算結果.value());
     }
 
     @Test
@@ -37,7 +39,7 @@ class ThreeLengthExpressionTest {
                 new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
         CalculationResult 計算結果 = threeLengthExpression.計算結果();
 
-        assertEquals(new CalculationResult(-5d).value, 計算結果.value);
+        assertEquals(new CalculationResult(-5d).value(), 計算結果.value());
     }
 
     @Test
@@ -52,7 +54,7 @@ class ThreeLengthExpressionTest {
                 new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
         CalculationResult 計算結果 = threeLengthExpression.計算結果();
 
-        assertEquals(new CalculationResult(0d).value, 計算結果.value);
+        assertEquals(new CalculationResult(0d).value(), 計算結果.value());
     }
 
     @Test

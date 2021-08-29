@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.result;
 
 /**
  * 正解か不正解か

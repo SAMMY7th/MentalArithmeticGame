@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.expression;
 
 import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
 import net.nocono.mentalarithmetic.domain.type.operator.Operator;
@@ -11,7 +11,7 @@ public class TwoLengthExpression implements Expression {
     Operator operator;
     DigitInteger number2;
 
-    TwoLengthExpression(DigitInteger number1, Operator operator, DigitInteger number2) {
+    public TwoLengthExpression(DigitInteger number1, Operator operator, DigitInteger number2) {
         this.number1 = number1;
         this.operator = operator;
         this.number2 = number2;

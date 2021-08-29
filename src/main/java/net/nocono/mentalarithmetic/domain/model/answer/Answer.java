@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.answer;
 
 import java.util.EnumSet;
 import java.util.List;

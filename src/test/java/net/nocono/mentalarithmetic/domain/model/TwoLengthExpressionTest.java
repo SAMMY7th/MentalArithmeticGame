@@ -1,5 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
+import net.nocono.mentalarithmetic.domain.model.expression.CalculationResult;
+import net.nocono.mentalarithmetic.domain.model.expression.TwoLengthExpression;
 import net.nocono.mentalarithmetic.domain.type.operator.Operator;
 import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
 import org.junit.jupiter.api.Test;
@@ -15,7 +17,7 @@ class TwoLengthExpressionTest {
                 new TwoLengthExpression(SingleDigitInteger.valueOf(1), Operator.足す, SingleDigitInteger.valueOf(2));
         CalculationResult 計算結果 = twoLengthExpression.計算結果();
 
-        assertEquals(new CalculationResult(3d).value, 計算結果.value);
+        assertEquals(new CalculationResult(3d).value(), 計算結果.value());
     }
 
     @Test

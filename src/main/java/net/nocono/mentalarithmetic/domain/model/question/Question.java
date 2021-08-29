@@ -1,5 +1,8 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.question;
 
+import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
+import net.nocono.mentalarithmetic.domain.model.answer.Answer;
+import net.nocono.mentalarithmetic.domain.model.expression.Expression;
 import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
 
 /**
@@ -16,8 +19,8 @@ public class Question {
         this.右辺 = 右辺;
     }
 
-    Answer 正解() {
-        boolean 真偽 = 比較演算子.apply(左辺.計算結果().value, 右辺.計算結果().value);
+    public Answer 正解() {
+        boolean 真偽 = 比較演算子.apply(左辺.計算結果().value(), 右辺.計算結果().value());
         if(真偽) return Answer.はい;
 
         return Answer.いいえ;

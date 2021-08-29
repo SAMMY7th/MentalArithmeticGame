@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.expression;
 
 import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
 import net.nocono.mentalarithmetic.domain.type.operator.Operator;
@@ -13,7 +13,7 @@ public class ThreeLengthExpression implements Expression {
     Operator operator2;
     DigitInteger number3;
 
-    ThreeLengthExpression(DigitInteger number1, Operator operator1, DigitInteger number2, Operator operator2, DigitInteger number3) {
+    public ThreeLengthExpression(DigitInteger number1, Operator operator1, DigitInteger number2, Operator operator2, DigitInteger number3) {
         this.number1 = number1;
         this.operator1 = operator1;
         this.number2 = number2;

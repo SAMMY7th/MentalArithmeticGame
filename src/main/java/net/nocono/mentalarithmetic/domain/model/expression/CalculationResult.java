@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.expression;
 
 /**
  * 計算結果
@@ -6,7 +6,7 @@ package net.nocono.mentalarithmetic.domain.model;
 public class CalculationResult {
     double value;
 
-    CalculationResult(double value) {
+    public CalculationResult(double value) {
         this.value = value;
     }
 

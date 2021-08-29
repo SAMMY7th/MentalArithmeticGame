@@ -1,6 +1,10 @@
 package net.nocono.mentalarithmetic.application.service;
 
-import net.nocono.mentalarithmetic.domain.model.*;
+import net.nocono.mentalarithmetic.domain.model.answer.Answer;
+import net.nocono.mentalarithmetic.domain.model.level.Level;
+import net.nocono.mentalarithmetic.domain.model.question.Question;
+import net.nocono.mentalarithmetic.domain.model.question.QuestionGenerator;
+import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
 import org.springframework.stereotype.Service;
 
 /**

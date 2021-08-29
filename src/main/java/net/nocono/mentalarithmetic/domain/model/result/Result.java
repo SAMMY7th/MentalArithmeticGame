@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.result;
 
 import net.nocono.mentalarithmetic.domain.type.MilliSeconds;
 

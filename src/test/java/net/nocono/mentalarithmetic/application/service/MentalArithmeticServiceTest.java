@@ -1,9 +1,9 @@
 package net.nocono.mentalarithmetic.application.service;
 
-import net.nocono.mentalarithmetic.domain.model.Answer;
-import net.nocono.mentalarithmetic.domain.model.CorrectResult;
-import net.nocono.mentalarithmetic.domain.model.Level;
-import net.nocono.mentalarithmetic.domain.model.Question;
+import net.nocono.mentalarithmetic.domain.model.answer.Answer;
+import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
+import net.nocono.mentalarithmetic.domain.model.level.Level;
+import net.nocono.mentalarithmetic.domain.model.question.Question;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

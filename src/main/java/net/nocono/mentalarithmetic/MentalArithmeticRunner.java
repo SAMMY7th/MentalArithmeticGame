@@ -1,7 +1,11 @@
 package net.nocono.mentalarithmetic;
 
 import net.nocono.mentalarithmetic.application.service.MentalArithmeticService;
-import net.nocono.mentalarithmetic.domain.model.*;
+import net.nocono.mentalarithmetic.domain.model.answer.Answer;
+import net.nocono.mentalarithmetic.domain.model.level.Level;
+import net.nocono.mentalarithmetic.domain.model.question.Question;
+import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
+import net.nocono.mentalarithmetic.domain.model.result.Result;
 import net.nocono.mentalarithmetic.domain.type.MilliSeconds;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

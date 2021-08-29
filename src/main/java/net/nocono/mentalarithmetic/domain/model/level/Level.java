@@ -1,5 +1,8 @@
-package net.nocono.mentalarithmetic.domain.model;
+package net.nocono.mentalarithmetic.domain.model.level;
 
+import net.nocono.mentalarithmetic.domain.model.expression.Expression;
+import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthExpression;
+import net.nocono.mentalarithmetic.domain.model.expression.TwoLengthExpression;
 import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
 import net.nocono.mentalarithmetic.domain.type.digit.ThreeDigitInteger;
 import net.nocono.mentalarithmetic.domain.type.digit.TwoDigitInteger;
