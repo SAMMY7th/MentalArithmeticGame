@@ -1,11 +1,13 @@
 package net.nocono.mentalarithmetic.domain.type.operator;
 
+import net.nocono.mentalarithmetic.domain.type.Token;
+
 import java.util.Random;
 
 /**
  * 演算子
  */
-public enum Operator {
+public enum Operator implements Token {
     足す("+", new Priority(2)) {
         public double apply(double value1, double value2) { return value1 + value2; }
     },

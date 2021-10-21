@@ -1,13 +1,14 @@
 package net.nocono.mentalarithmetic.domain.type.digit;
 
 import net.nocono.mentalarithmetic.domain.model.expression.DigitLength;
+import net.nocono.mentalarithmetic.domain.type.Token;
 
 import java.util.Random;
 
 /**
  * 桁数を指定した整数
  */
-public class DigitInteger {
+public class DigitInteger implements Token {
     int value;
     DigitLength length;
 
@@ -32,5 +33,9 @@ public class DigitInteger {
     @Override
     public String toString() {
         return String.valueOf(value);
+    }
+
+    public double toDouble() {
+        return (double) value;
     }
 }
