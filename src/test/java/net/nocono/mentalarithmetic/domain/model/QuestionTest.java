@@ -1,14 +1,5 @@
 package net.nocono.mentalarithmetic.domain.model;
 
-import net.nocono.mentalarithmetic.domain.model.answer.Answer;
-import net.nocono.mentalarithmetic.domain.model.expression.Expression;
-import net.nocono.mentalarithmetic.domain.model.question.Question;
-import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
-import net.nocono.mentalarithmetic.domain.type.operator.Operator;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 class QuestionTest {
 
     // FIXME:

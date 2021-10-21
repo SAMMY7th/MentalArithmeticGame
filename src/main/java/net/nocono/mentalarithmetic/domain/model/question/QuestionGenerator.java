@@ -2,7 +2,7 @@ package net.nocono.mentalarithmetic.domain.model.question;
 
 import net.nocono.mentalarithmetic.domain.model.expression.Expression;
 import net.nocono.mentalarithmetic.domain.model.level.Level;
-import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
+import net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator;
 
 /**
  * 質問生成

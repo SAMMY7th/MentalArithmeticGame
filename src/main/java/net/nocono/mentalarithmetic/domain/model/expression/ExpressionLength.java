@@ -1,8 +1,8 @@
 package net.nocono.mentalarithmetic.domain.model.expression;
 
-import net.nocono.mentalarithmetic.domain.type.Token;
-import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
-import net.nocono.mentalarithmetic.domain.type.operator.Operator;
+import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
+import net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger;
+import net.nocono.mentalarithmetic.domain.model.expression.token.Operator;
 
 import java.util.List;
 import java.util.Random;

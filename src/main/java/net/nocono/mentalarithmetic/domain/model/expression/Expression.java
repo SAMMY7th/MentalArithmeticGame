@@ -1,9 +1,9 @@
 package net.nocono.mentalarithmetic.domain.model.expression;
 
 import net.nocono.mentalarithmetic.domain.model.level.Level;
-import net.nocono.mentalarithmetic.domain.type.Token;
-import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
-import net.nocono.mentalarithmetic.domain.type.operator.Operator;
+import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
+import net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger;
+import net.nocono.mentalarithmetic.domain.model.expression.token.Operator;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,6 +1,4 @@
-package net.nocono.mentalarithmetic.domain.type.operator;
-
-import net.nocono.mentalarithmetic.domain.type.Token;
+package net.nocono.mentalarithmetic.domain.model.expression.token;
 
 import java.util.Random;
 

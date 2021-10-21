@@ -3,7 +3,7 @@ package net.nocono.mentalarithmetic.domain.model.question;
 import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
 import net.nocono.mentalarithmetic.domain.model.answer.Answer;
 import net.nocono.mentalarithmetic.domain.model.expression.Expression;
-import net.nocono.mentalarithmetic.domain.type.operator.ComparisonOperator;
+import net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator;
 
 /**
  * 問題
