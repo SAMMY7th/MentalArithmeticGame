@@ -37,7 +37,7 @@ public class MentalArithmeticRunner implements ApplicationRunner {
             return;
         }
 
-        Optional<Level> level = Level.レベル取得(argStrs);
+        Optional<Level> level = Level.from(argStrs);
         if (level.isEmpty()) {
             System.out.println("パラメータが不正です。");
             return;
@@ -50,14 +50,14 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         System.out.println("y or n");
 
         Scanner scanner = new Scanner(System.in);
-        String ユーザーの入力 = scanner.next();
         LocalDateTime 解答日時 = LocalDateTime.now();
+        Answer.from(scanner.next()).ifPresentOrElse(ユーザーの解答 -> {
+            CorrectResult 正誤 = mentalArithmeticService.ユーザーの解答の正誤を判定する(問題, ユーザーの解答);
+            MilliSeconds 解答時間 = MilliSeconds.from(出題日時, 解答日時);
 
-        Optional<Answer> ユーザーの解答 = Answer.入力文字から変換(ユーザーの入力);
-        ユーザーの解答.ifPresentOrElse(解答 -> {
-            CorrectResult 正誤 = mentalArithmeticService.入力された解答の正誤を判定する(問題, 解答);
-            Result 結果 = new Result(正誤, MilliSeconds.from(出題日時, 解答日時));
-            System.out.println(問題.計算式を計算した状態での比較式());
+            Result 結果 = new Result(正誤, 解答時間);
+
+            System.out.println(問題.計算結果());
             System.out.println(結果);
         }, () -> System.out.println("入力が正しくありません。"));
 

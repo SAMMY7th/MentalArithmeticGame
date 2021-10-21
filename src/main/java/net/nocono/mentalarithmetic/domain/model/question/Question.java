@@ -21,9 +21,9 @@ public class Question {
 
     public Answer 正解() {
         boolean 真偽 = 比較演算子.apply(左辺.計算結果().value(), 右辺.計算結果().value());
-        if(真偽) return Answer.はい;
+        if(真偽) return Answer.マル;
 
-        return Answer.いいえ;
+        return Answer.バツ;
     }
 
     @Override
@@ -31,12 +31,12 @@ public class Question {
         return 左辺.toString() + " " + 比較演算子.toString() + " " + 右辺.toString();
     }
 
-    public CorrectResult 判定(Answer ユーザーの解答) {
+    public CorrectResult 正誤判定(Answer ユーザーの解答) {
         if(ユーザーの解答 == 正解()) return CorrectResult.正解;
         return CorrectResult.不正解;
     }
 
-    public String 計算式を計算した状態での比較式() {
+    public String 計算結果() {
         return 左辺.計算結果().toString() + " " + 比較演算子.toString() + " " + 右辺.計算結果().toString();
     }
 }

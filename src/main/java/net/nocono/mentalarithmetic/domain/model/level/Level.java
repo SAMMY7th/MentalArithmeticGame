@@ -66,7 +66,7 @@ public enum Level {
     public abstract Expression 左辺();
     public abstract Expression 右辺();
 
-    public static Optional<Level> レベル取得(String[] 入力されたパラメータ) {
+    public static Optional<Level> from(String[] 入力されたパラメータ) {
         if (入力されたパラメータ.length <= 0) {
             return Optional.of(Level.Normal);
         }
