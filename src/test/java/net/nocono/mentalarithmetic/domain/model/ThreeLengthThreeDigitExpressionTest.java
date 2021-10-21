@@ -1,7 +1,7 @@
 package net.nocono.mentalarithmetic.domain.model;
 
 import net.nocono.mentalarithmetic.domain.model.expression.CalculationResult;
-import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthExpression;
+import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthThreeDigitExpression;
 import net.nocono.mentalarithmetic.domain.type.digit.DigitInteger;
 import net.nocono.mentalarithmetic.domain.type.operator.Operator;
 import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class ThreeLengthExpressionTest {
+class ThreeLengthThreeDigitExpressionTest {
 
     @Test
     void 数字3個でOperator1の優先度の方が高い計算式の結果を得ることができる() {
@@ -20,9 +20,9 @@ class ThreeLengthExpressionTest {
         Operator operator2 = Operator.足す;
         DigitInteger number3 = SingleDigitInteger.valueOf(3);
 
-        ThreeLengthExpression threeLengthExpression =
-                new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
-        CalculationResult 計算結果 = threeLengthExpression.計算結果();
+        ThreeLengthThreeDigitExpression threeLengthThreeDigitExpression =
+                new ThreeLengthThreeDigitExpression(number1, operator1, number2, operator2, number3);
+        CalculationResult 計算結果 = threeLengthThreeDigitExpression.計算結果();
 
         assertEquals(new CalculationResult(3.5d).value(), 計算結果.value());
     }
@@ -35,9 +35,9 @@ class ThreeLengthExpressionTest {
         Operator operator2 = Operator.掛ける;
         DigitInteger number3 = SingleDigitInteger.valueOf(3);
 
-        ThreeLengthExpression threeLengthExpression =
-                new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
-        CalculationResult 計算結果 = threeLengthExpression.計算結果();
+        ThreeLengthThreeDigitExpression threeLengthThreeDigitExpression =
+                new ThreeLengthThreeDigitExpression(number1, operator1, number2, operator2, number3);
+        CalculationResult 計算結果 = threeLengthThreeDigitExpression.計算結果();
 
         assertEquals(new CalculationResult(-5d).value(), 計算結果.value());
     }
@@ -50,9 +50,9 @@ class ThreeLengthExpressionTest {
         Operator operator2 = Operator.引く;
         DigitInteger number3 = SingleDigitInteger.valueOf(3);
 
-        ThreeLengthExpression threeLengthExpression =
-                new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
-        CalculationResult 計算結果 = threeLengthExpression.計算結果();
+        ThreeLengthThreeDigitExpression threeLengthThreeDigitExpression =
+                new ThreeLengthThreeDigitExpression(number1, operator1, number2, operator2, number3);
+        CalculationResult 計算結果 = threeLengthThreeDigitExpression.計算結果();
 
         assertEquals(new CalculationResult(0d).value(), 計算結果.value());
     }
@@ -65,9 +65,9 @@ class ThreeLengthExpressionTest {
         Operator operator2 = Operator.割る;
         DigitInteger number3 = SingleDigitInteger.valueOf(0);
 
-        ThreeLengthExpression threeLengthExpression =
-                new ThreeLengthExpression(number1, operator1, number2, operator2, number3);
+        ThreeLengthThreeDigitExpression threeLengthThreeDigitExpression =
+                new ThreeLengthThreeDigitExpression(number1, operator1, number2, operator2, number3);
 
-        assertTrue(threeLengthExpression.ゼロ除算発生());
+        assertTrue(threeLengthThreeDigitExpression.ゼロ除算発生());
     }
 }

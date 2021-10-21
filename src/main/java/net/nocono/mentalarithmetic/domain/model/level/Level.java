@@ -1,12 +1,9 @@
 package net.nocono.mentalarithmetic.domain.model.level;
 
 import net.nocono.mentalarithmetic.domain.model.expression.Expression;
-import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthExpression;
-import net.nocono.mentalarithmetic.domain.model.expression.TwoLengthExpression;
-import net.nocono.mentalarithmetic.domain.type.digit.SingleDigitInteger;
-import net.nocono.mentalarithmetic.domain.type.digit.ThreeDigitInteger;
-import net.nocono.mentalarithmetic.domain.type.digit.TwoDigitInteger;
-import net.nocono.mentalarithmetic.domain.type.operator.Operator;
+import net.nocono.mentalarithmetic.domain.model.expression.ThreeLengthThreeDigitExpression;
+import net.nocono.mentalarithmetic.domain.model.expression.TwoLengthSingleDigitExpression;
+import net.nocono.mentalarithmetic.domain.model.expression.TwoLengthTwoDigitExpression;
 
 import java.util.EnumSet;
 import java.util.Optional;
@@ -18,42 +15,32 @@ public enum Level {
     Easy("-e") {
         @Override
         public Expression 左辺() {
-            return new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+            return TwoLengthSingleDigitExpression.generate();
         }
 
         @Override
         public Expression 右辺() {
-            return new TwoLengthExpression(SingleDigitInteger.random(), Operator.random(), SingleDigitInteger.random());
+            return TwoLengthSingleDigitExpression.generate();
         }
     }, Normal("-n") {
         @Override
         public Expression 左辺() {
-            return new TwoLengthExpression(TwoDigitInteger.random(), Operator.random(), TwoDigitInteger.random());
+            return TwoLengthTwoDigitExpression.generate();
         }
 
         @Override
         public Expression 右辺() {
-            return new TwoLengthExpression(TwoDigitInteger.random(), Operator.random(), TwoDigitInteger.random());
+            return TwoLengthTwoDigitExpression.generate();
         }
     }, Hard("-h") {
         @Override
         public Expression 左辺() {
-            return new ThreeLengthExpression(
-                    ThreeDigitInteger.random(),
-                    Operator.random(),
-                    ThreeDigitInteger.random(),
-                    Operator.random(),
-                    ThreeDigitInteger.random());
+            return ThreeLengthThreeDigitExpression.generate();
         }
 
         @Override
         public Expression 右辺() {
-            return new ThreeLengthExpression(
-                    ThreeDigitInteger.random(),
-                    Operator.random(),
-                    ThreeDigitInteger.random(),
-                    Operator.random(),
-                    ThreeDigitInteger.random());
+            return ThreeLengthThreeDigitExpression.generate();
         }
     };
 
