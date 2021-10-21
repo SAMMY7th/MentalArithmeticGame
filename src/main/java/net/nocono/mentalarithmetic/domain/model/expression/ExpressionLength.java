@@ -17,29 +17,31 @@ public enum ExpressionLength {
     Random random = new Random();
 
     public List<Token> 式生成(DigitLength 数字の桁数) {
-        List<Token> 式 = switch (this) {
-            case 数字2個 -> List.of(
+        switch (this) {
+            case 数字2個:
+                return List.of(
                     DigitInteger.random(数字の桁数),
                     DigitInteger.random(数字の桁数),
                     Operator.random());
-            case 数字3個 -> {
+            case 数字3個: {
                 if (random.nextBoolean()) {
-                    yield List.of(
+                    return List.of(
                             DigitInteger.random(数字の桁数),
                             DigitInteger.random(数字の桁数),
                             Operator.random(),
                             DigitInteger.random(数字の桁数),
                             Operator.random());
                 }
-                yield List.of(
+                return List.of(
                         DigitInteger.random(数字の桁数),
                         DigitInteger.random(数字の桁数),
                         DigitInteger.random(数字の桁数),
                         Operator.random(),
                         Operator.random());
             }
-        };
+            default: List.of();
+        }
 
-        return 式;
+        return List.of();
     }
 }

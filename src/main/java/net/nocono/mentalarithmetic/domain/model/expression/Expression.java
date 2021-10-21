@@ -31,9 +31,14 @@ public class Expression {
     public CalculationResult 計算結果() {
         LinkedList<Double> stack = new LinkedList<>();
         for (Token token: 後置記法の式) {
-            if (token instanceof DigitInteger 数値) {
+            // TODO: JDK17対応
+//            if (token instanceof DigitInteger 数値) {
+            if (token instanceof DigitInteger) {
+                DigitInteger 数値 = (DigitInteger) token;
                 stack.add(数値.toDouble());
-            } else if (token instanceof Operator 演算子) {
+//            } else if (token instanceof Operator 演算子) {
+            } else if (token instanceof Operator) {
+                Operator 演算子 = (Operator) token;
                 double 計算結果 = 演算子.apply(stack.removeLast(), stack.removeLast());
                 stack.add(計算結果);
             }
