@@ -16,8 +16,8 @@ public class QuestionGenerator {
 
     public Question generate() {
         ComparisonOperator 比較演算子 = ComparisonOperator.random();
-        Expression 左辺 = Expression.generate(level);
-        Expression 右辺 = Expression.generate(level);
+        Expression 左辺 = Expression.generate(level.桁数(), level.式の長さ());
+        Expression 右辺 = Expression.generate(level.桁数(), level.式の長さ());
         return new Question(左辺, 比較演算子, 右辺);
     }
 }

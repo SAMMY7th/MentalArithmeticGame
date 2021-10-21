@@ -1,9 +1,9 @@
 package net.nocono.mentalarithmetic.domain.model.expression;
 
-import net.nocono.mentalarithmetic.domain.model.level.Level;
-import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
 import net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger;
+import net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength;
 import net.nocono.mentalarithmetic.domain.model.expression.token.Operator;
+import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,11 +18,11 @@ public class Expression {
         this.後置記法の式 = 後置記法の式;
     }
 
-    public static Expression generate(Level level) {
-        Expression 式 = new Expression(level.式の長さ().式生成(level.桁数()));
+    public static Expression generate(DigitLength 桁数, ExpressionLength 式の長さ) {
+        Expression 式 = new Expression(式の長さ.式生成(桁数));
 
         while (式.ゼロ除算発生()) {
-            式 = new Expression(level.式の長さ().式生成(level.桁数()));
+            式 = new Expression(式の長さ.式生成(桁数));
         }
 
         return 式;

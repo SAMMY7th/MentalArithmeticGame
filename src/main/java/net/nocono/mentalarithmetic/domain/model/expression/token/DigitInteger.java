@@ -1,7 +1,5 @@
 package net.nocono.mentalarithmetic.domain.model.expression.token;
 
-import net.nocono.mentalarithmetic.domain.model.expression.DigitLength;
-
 import java.util.Random;
 
 /**

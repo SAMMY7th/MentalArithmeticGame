@@ -1,4 +1,4 @@
-package net.nocono.mentalarithmetic.domain.model.expression;
+package net.nocono.mentalarithmetic.domain.model.expression.token;
 
 /**
  * 整数の桁数

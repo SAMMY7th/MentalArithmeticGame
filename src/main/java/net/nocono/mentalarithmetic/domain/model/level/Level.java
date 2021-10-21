@@ -1,6 +1,6 @@
 package net.nocono.mentalarithmetic.domain.model.level;
 
-import net.nocono.mentalarithmetic.domain.model.expression.DigitLength;
+import net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength;
 import net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength;
 
 import java.util.EnumSet;

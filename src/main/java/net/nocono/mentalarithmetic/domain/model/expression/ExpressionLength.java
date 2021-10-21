@@ -1,5 +1,6 @@
 package net.nocono.mentalarithmetic.domain.model.expression;
 
+import net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength;
 import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
 import net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger;
 import net.nocono.mentalarithmetic.domain.model.expression.token.Operator;
