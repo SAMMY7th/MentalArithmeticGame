@@ -4,9 +4,9 @@ import net.nocono.mentalarithmetic.application.service.MentalArithmeticService;
 import net.nocono.mentalarithmetic.domain.model.answer.Answer;
 import net.nocono.mentalarithmetic.domain.model.level.Level;
 import net.nocono.mentalarithmetic.domain.model.question.Question;
+import net.nocono.mentalarithmetic.domain.model.result.AnswerTime;
 import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
 import net.nocono.mentalarithmetic.domain.model.result.Result;
-import net.nocono.mentalarithmetic.domain.type.MilliSeconds;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -53,7 +53,7 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         LocalDateTime 解答日時 = LocalDateTime.now();
         Answer.from(scanner.next()).ifPresentOrElse(ユーザーの解答 -> {
             CorrectResult 正誤 = mentalArithmeticService.ユーザーの解答の正誤を判定する(問題, ユーザーの解答);
-            MilliSeconds 解答時間 = MilliSeconds.from(出題日時, 解答日時);
+            AnswerTime 解答時間 = AnswerTime.from(出題日時, 解答日時);
 
             Result 結果 = new Result(正誤, 解答時間);
 
