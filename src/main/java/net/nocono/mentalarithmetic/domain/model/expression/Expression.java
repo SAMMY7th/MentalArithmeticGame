@@ -39,8 +39,9 @@ public class Expression {
 //            } else if (token instanceof Operator 演算子) {
             } else if (token instanceof Operator) {
                 Operator 演算子 = (Operator) token;
-                double 計算結果 = 演算子.apply(stack.removeLast(), stack.removeLast());
-                stack.add(計算結果);
+                double 数2 = stack.removeLast();
+                double 数1 = stack.removeLast();
+                stack.add(演算子.apply(数1, 数2));
             }
         }
 
