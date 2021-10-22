@@ -56,7 +56,29 @@ public class Expression {
 
     @Override
     public String toString() {
-        // TODO:
-        return "";
+        LinkedList<String> stack = new LinkedList<>();
+        for (Token token: 後置記法の式) {
+            // TODO: JDK17対応
+//            if (token instanceof DigitInteger 数値) {
+            if (token instanceof DigitInteger) {
+                DigitInteger 数値 = (DigitInteger) token;
+                stack.add(数値.toString());
+//            } else if (token instanceof Operator 演算子) {
+            } else if (token instanceof Operator) {
+                Operator 演算子 = (Operator) token;
+                String 数字2 = stack.removeLast();
+                String 数字1 = stack.removeLast();
+
+                String 式 = 数字1 + 演算子 + 数字2;
+
+                stack.add(式);
+            }
+        }
+
+        String result = "";
+        for (String s: stack) {
+            result = result + s;
+        }
+        return result;
     }
 }
