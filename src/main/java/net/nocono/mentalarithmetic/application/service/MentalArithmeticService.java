@@ -3,7 +3,6 @@ package net.nocono.mentalarithmetic.application.service;
 import net.nocono.mentalarithmetic.domain.model.answer.Answer;
 import net.nocono.mentalarithmetic.domain.model.level.Level;
 import net.nocono.mentalarithmetic.domain.model.question.Question;
-import net.nocono.mentalarithmetic.domain.model.question.QuestionGenerator;
 import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +13,7 @@ import org.springframework.stereotype.Service;
 public class MentalArithmeticService {
 
     public Question 出題する(Level level) {
-        QuestionGenerator 問題生成 = new QuestionGenerator(level);
-        return 問題生成.generate();
+        return Question.generate(level);
     }
 
     public CorrectResult ユーザーの解答の正誤を判定する(Question 問題, Answer 解答) {
