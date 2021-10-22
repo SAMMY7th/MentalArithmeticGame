@@ -11,7 +11,7 @@ public class DigitInteger implements Token {
 
     static Random random = new Random();
 
-    DigitInteger(int value, DigitLength length) {
+    public DigitInteger(int value, DigitLength length) {
         if (value < length.MIN()) throw new IllegalArgumentException("不正：" + length.MIN() + "未満");
         if (value > length.MAX()) throw new IllegalArgumentException("不正：" + length.MAX() + "超");
 
