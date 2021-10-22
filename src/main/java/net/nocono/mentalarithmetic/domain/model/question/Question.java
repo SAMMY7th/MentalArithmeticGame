@@ -1,10 +1,8 @@
 package net.nocono.mentalarithmetic.domain.model.question;
 
-import net.nocono.mentalarithmetic.domain.model.level.Level;
-import net.nocono.mentalarithmetic.domain.model.result.CorrectResult;
-import net.nocono.mentalarithmetic.domain.model.answer.Answer;
 import net.nocono.mentalarithmetic.domain.model.expression.Expression;
 import net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator;
+import net.nocono.mentalarithmetic.domain.model.level.Level;
 
 /**
  * 問題
