@@ -50,8 +50,8 @@ public class MentalArithmeticRunner implements ApplicationRunner {
         System.out.println("y or n");
 
         Scanner scanner = new Scanner(System.in);
-        LocalDateTime 解答日時 = LocalDateTime.now();
         Answer.from(scanner.next()).ifPresentOrElse(ユーザーの解答 -> {
+            LocalDateTime 解答日時 = LocalDateTime.now();
             CorrectResult 正誤 = mentalArithmeticService.ユーザーの解答の正誤を判定する(問題, ユーザーの解答);
             AnswerTime 解答時間 = AnswerTime.from(出題日時, 解答日時);
 

@@ -18,7 +18,12 @@ public class AnswerTime {
         return new AnswerTime(MilliSeconds.from(出題日時, 解答日時));
     }
 
-    public MilliSeconds 秒() {
+    public MilliSeconds ミリ秒() {
         return 解答時間;
+    }
+
+    @Override
+    public String toString() {
+        return 解答時間.秒() + "秒";
     }
 }

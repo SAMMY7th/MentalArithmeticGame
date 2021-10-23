@@ -14,6 +14,6 @@ public class Result {
 
     @Override
     public String toString() {
-        return this.正解か不正解か + "(" + this.解答時間.秒() + "秒)";
+        return this.正解か不正解か + "(" + this.解答時間 + ")";
     }
 }
