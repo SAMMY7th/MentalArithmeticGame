@@ -79,8 +79,7 @@ class ExpressionTest {
         assertEquals("1-2*3", 式.toString());
     }
 
-    // FIXME:
-//    @Test
+    @Test
     void 括弧を使った式を出力することができる() {
         Expression 式 = new Expression(List.of(
                 new DigitInteger(1, DigitLength.一桁),
@@ -90,5 +89,17 @@ class ExpressionTest {
                 Operator.掛ける));
 
         assertEquals("1*(2+3)", 式.toString());
+    }
+
+    @Test
+    void 先頭以外の負の値には括弧がつく() {
+        Expression 式 = new Expression(List.of(
+                new DigitInteger(-1, DigitLength.一桁),
+                new DigitInteger(-2, DigitLength.一桁),
+                new DigitInteger(-3, DigitLength.一桁),
+                Operator.足す,
+                Operator.掛ける));
+
+        assertEquals("-1*((-2)+(-3))", 式.toString());
     }
 }

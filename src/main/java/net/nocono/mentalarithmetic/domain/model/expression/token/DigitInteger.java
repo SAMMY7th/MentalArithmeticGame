@@ -35,4 +35,8 @@ public class DigitInteger implements Token {
     public double toDouble() {
         return (double) value;
     }
+
+    public boolean 負の値() {
+        return value < 0;
+    }
 }

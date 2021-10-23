@@ -8,6 +8,9 @@ import net.nocono.mentalarithmetic.domain.model.expression.token.Token;
 import java.util.LinkedList;
 import java.util.List;
 
+import static net.nocono.mentalarithmetic.domain.model.expression.token.Operator.割る;
+import static net.nocono.mentalarithmetic.domain.model.expression.token.Operator.掛ける;
+
 /**
  * 数式
  */
@@ -57,12 +60,20 @@ public class Expression {
     @Override
     public String toString() {
         LinkedList<String> stack = new LinkedList<>();
-        for (Token token: 後置記法の式) {
+        for (int i = 0; i < 後置記法の式.size(); i++) {
+            Token token = 後置記法の式.get(i);
             // TODO: JDK17対応
 //            if (token instanceof DigitInteger 数値) {
             if (token instanceof DigitInteger) {
                 DigitInteger 数値 = (DigitInteger) token;
-                stack.add(数値.toString());
+
+                // 1個目ではない負の値である場合、括弧をつける
+                if (数値.負の値() && !stack.isEmpty()) {
+                    stack.add("(" + 数値.toString() + ")");
+                } else {
+                    stack.add(数値.toString());
+                }
+
 //            } else if (token instanceof Operator 演算子) {
             } else if (token instanceof Operator) {
                 Operator 演算子 = (Operator) token;
@@ -71,7 +82,22 @@ public class Expression {
 
                 String 式 = 数字1 + 演算子 + 数字2;
 
-                stack.add(式);
+                // あとに優先度が高い演算子がある場合、括弧をつける
+                boolean 括弧有り = false;
+                for (int j = i + 1; j < 後置記法の式.size(); j++) {
+                    Token token2 = 後置記法の式.get(j);
+                    if (token2 instanceof Operator) {
+                        if (token2 == 掛ける || token2 == 割る) {
+                            括弧有り = true;
+                        }
+                    }
+                }
+
+                if (括弧有り) {
+                    stack.add("(" + 式 + ")");
+                } else {
+                    stack.add(式);
+                }
             }
         }
 
