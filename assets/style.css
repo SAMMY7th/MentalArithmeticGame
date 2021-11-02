@@ -1,0 +1,92 @@
+a {
+    color: #000;
+    text-decoration-line: none;
+}
+a:hover {
+    text-decoration-line: underline;
+}
+
+body {
+    margin: 0 8px;
+}
+
+.menu {
+    /* box-sizing: border-box; */
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    width: 300px;
+    font-size: 0.8em;
+
+    border-right: dashed 1px;
+}
+.menu a, .menu summary {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+.menu details > div {
+    margin-left: 30px;
+}
+
+main {
+    margin-left: 300px;
+}
+
+section.package > h2, section.type> h2 {
+    margin-bottom: 0px;
+}
+section.package, section.type {
+    border-top: #000 solid 1px;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+section.markdown {
+    margin: 0.5em;
+}
+section.type table caption {
+    caption-side: top;
+    text-align: left;
+}
+
+main table {
+    border-collapse: collapse;
+    width: 80%;
+}
+main table tr > * {
+    border: #000 solid 1px;
+    padding-left: 0.5em;
+    text-align: left;
+}
+main table thead {
+    color: #FFF;
+    background-color: #465DAA;
+}
+.method-name {
+    white-space: nowrap;
+}
+.method-argument-item {
+    display: block;
+}
+
+.fully-qualified-name {
+    font-size: 0.8em;
+    color: silver;
+}
+
+.index > header {
+    border-bottom:solid 1px #999;
+}
+.index > header > h1 {
+    margin-bottom: 0;
+}
+.index > header > p {
+    font-size: 0.6em;
+    margin-top: 0;
+}
+.index > header, .index > main {
+    margin:0 auto;
+    max-width: 800px;
+}
+.index .diagram img {
+    max-width: 800px;
+}

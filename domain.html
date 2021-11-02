@@ -1,0 +1,1404 @@
+<html lang="ja">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="./assets/style.css" rel="stylesheet">
+    <script src="./assets/marked.2.0.1.min.js"></script>
+</head>
+<body>
+
+<nav class="menu">
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain">ビジネスルール</a>
+            </summary>
+            <div>
+                
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model">ビジネスルールを表現する複合型</a>
+            </summary>
+            <div>
+                
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.level">難易度</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.level.Level">難易度</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.question">問題</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.question.Question">問題</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.result">結果</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.result.AnswerTime">解答時間</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.result.CorrectResult">正解か不正解か</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.result.Result">結果</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.expression">数式</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.CalculationResult">計算結果</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength">式の長さ</a><br>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.expression.token">トークン</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator">比較演算子</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger">桁数を指定した整数</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.Operator">演算子</a><br>
+        
+    
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.Token">トークン</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+            </div>
+        </details>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.model.answer">解答</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.model.answer.Answer">解答</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+            </div>
+        </details>
+        
+    
+        <details open>
+            <summary class="package">
+                <a href="#net.nocono.mentalarithmetic.domain.type">ビジネスルールを表現する基本型</a>
+            </summary>
+            <div>
+                
+        
+        
+            <a href="#net.nocono.mentalarithmetic.domain.type.MilliSeconds">ミリ秒</a><br>
+        
+    
+            </div>
+        </details>
+        
+    
+            </div>
+        </details>
+        
+    
+</nav>
+
+<main>
+    <h1>ドメイン概要</h1>
+
+    
+        <section class="package">
+        <h2><a name="net">net</a></h2>
+        <small class="fully-qualified-name">net</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono">nocono</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono">nocono</a></h2>
+        <small class="fully-qualified-name">net.nocono</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic">mentalarithmetic</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic">mentalarithmetic</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain">ビジネスルール</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain">ビジネスルール</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model">ビジネスルールを表現する複合型</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.type">ビジネスルールを表現する基本型</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model">ビジネスルールを表現する複合型</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.level">難易度</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.question">問題</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.result">結果</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression">数式</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.answer">解答</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.answer">解答</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.answer</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.answer.Answer">解答</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression">数式</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.CalculationResult">計算結果</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength">式の長さ</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>▶︎ </span>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token">トークン</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token">トークン</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator">比較演算子</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger">桁数を指定した整数</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.Operator">演算子</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.Token">トークン</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.level">難易度</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.level</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.level.Level">難易度</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.question">問題</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.question</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.question.Question">問題</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.result">結果</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.result</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.result.AnswerTime">解答時間</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.result.CorrectResult">正解か不正解か</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.model.result.Result">結果</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+        <section class="package">
+        <h2><a name="net.nocono.mentalarithmetic.domain.type">ビジネスルールを表現する基本型</a></h2>
+        <small class="fully-qualified-name">net.nocono.mentalarithmetic.domain.type</small>
+
+        
+            
+        
+
+        
+            <section>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>名前</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="#net.nocono.mentalarithmetic.domain.type.MilliSeconds">ミリ秒</a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        
+    </section>
+    
+
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.answer.Answer">解答</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.answer.Answer</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>マル</li>
+                <li>バツ</li>
+            </ul>
+        </section>
+
+        
+        
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ from</td>
+                <td>
+                    <a class="method-argument-item" href="#java.lang.String">String</a>
+                </td>
+                <td>
+                    <a href="#java.util.Optional">Optional</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 正解</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.question.Question">問題</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.answer.Answer">解答</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.CalculationResult">計算結果</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.CalculationResult</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ value</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#double">double</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.Expression</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 計算結果</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.CalculationResult">計算結果</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ generate</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength">式の長さ</a><a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength">式の長さ</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>数字2個</li>
+                <li>数字3個</li>
+            </ul>
+        </section>
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 式生成</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a>
+                </td>
+                <td>
+                    <a href="#java.util.List">List</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator">比較演算子</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>イコール</li>
+                <li>以上</li>
+                <li>より大きい</li>
+                <li>以下</li>
+                <li>より小さい</li>
+            </ul>
+        </section>
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ apply</td>
+                <td>
+                    <a class="method-argument-item" href="#double">double</a><a class="method-argument-item" href="#double">double</a>
+                </td>
+                <td>
+                    <a href="#boolean">boolean</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ random</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator">比較演算子</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger">桁数を指定した整数</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ toDouble</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#double">double</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ value</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#int">int</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 負の値</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#boolean">boolean</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ random</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitInteger">桁数を指定した整数</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>一桁</li>
+                <li>二桁</li>
+                <li>三桁</li>
+            </ul>
+        </section>
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ MAX</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#int">int</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ MIN</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#int">int</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token.Operator">演算子</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token.Operator</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>足す</li>
+                <li>引く</li>
+                <li>掛ける</li>
+                <li>割る</li>
+            </ul>
+        </section>
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ apply</td>
+                <td>
+                    <a class="method-argument-item" href="#double">double</a><a class="method-argument-item" href="#double">double</a>
+                </td>
+                <td>
+                    <a href="#double">double</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ random</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.Operator">演算子</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.expression.token.Token">トークン</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.expression.token.Token</div>
+
+        
+            
+        
+
+        
+
+        
+        
+        
+        
+        
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.level.Level">難易度</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.level.Level</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>Easy</li>
+                <li>Normal</li>
+                <li>Hard</li>
+            </ul>
+        </section>
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 式の長さ</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.ExpressionLength">式の長さ</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 桁数</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.DigitLength">整数の桁数</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ from</td>
+                <td>
+                    <a class="method-argument-item" href="#java.lang.String[]">String[]</a>
+                </td>
+                <td>
+                    <a href="#java.util.Optional">Optional</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.question.Question">問題</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.question.Question</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 右辺</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 左辺</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.Expression">数式</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 比較演算子</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.expression.token.ComparisonOperator">比較演算子</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+            <tr>
+                <td class="method-name">+ 計算結果</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#java.lang.String">String</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ generate</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.level.Level">難易度</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.question.Question">問題</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.result.AnswerTime">解答時間</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.result.AnswerTime</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ ミリ秒</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.type.MilliSeconds">ミリ秒</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ from</td>
+                <td>
+                    <a class="method-argument-item" href="#java.time.LocalDateTime">LocalDateTime</a><a class="method-argument-item" href="#java.time.LocalDateTime">LocalDateTime</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.result.AnswerTime">解答時間</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.result.CorrectResult">正解か不正解か</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.result.CorrectResult</div>
+
+        
+            
+        
+
+        <section>
+            <h3>列挙値</h3>
+            <ul>
+                <li>正解</li>
+                <li>不正解</li>
+            </ul>
+        </section>
+
+        
+        
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 正誤判定</td>
+                <td>
+                    <a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.answer.Answer">解答</a><a class="method-argument-item" href="#net.nocono.mentalarithmetic.domain.model.question.Question">問題</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.model.result.CorrectResult">正解か不正解か</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.model.result.Result">結果</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.model.result.Result</div>
+
+        
+            
+        
+
+        
+
+        
+        
+        
+        
+        
+        
+    </section>
+    
+        <section class="type">
+        <h2><a name="net.nocono.mentalarithmetic.domain.type.MilliSeconds">ミリ秒</a></h2>
+        <div class="fully-qualified-name">net.nocono.mentalarithmetic.domain.type.MilliSeconds</div>
+
+        
+            
+        
+
+        
+
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">メソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ 秒</td>
+                <td>
+                    
+                </td>
+                <td>
+                    <a href="#float">float</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+        
+        <table>
+            <thead>
+            <tr>
+                <th width="20%">staticメソッド</th>
+                <th>引数</th>
+                <th>戻り値型</th>
+                <th>説明</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="method-name">+ from</td>
+                <td>
+                    <a class="method-argument-item" href="#java.time.LocalDateTime">LocalDateTime</a><a class="method-argument-item" href="#java.time.LocalDateTime">LocalDateTime</a>
+                </td>
+                <td>
+                    <a href="#net.nocono.mentalarithmetic.domain.type.MilliSeconds">ミリ秒</a>
+                </td>
+                <td class="markdown"></td>
+            </tr>
+        </table>
+        
+    </section>
+    
+</main>
+
+<script>
+Array.from(document.getElementsByClassName("markdown")).forEach(x => x.innerHTML = marked(x.innerHTML))
+
+</script>
+</body>
+</html>
