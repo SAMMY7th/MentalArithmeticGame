@@ -44,4 +44,4 @@ JIGの利用方法は下記ページを参考にしてください。
 
 [jig/jig-gradle-plugin at main · dddjava/jig](https://github.com/dddjava/jig/tree/main/jig-gradle-plugin)
 
-最新のJIGの図は [こちらのページ](https://github.com/SAMMY7th/MentalArithmeticGame) で見ることができます。
+最新のJIGの図は [こちらのページ](https://SAMMY7th.github.io/MentalArithmeticGame) で見ることができます。
